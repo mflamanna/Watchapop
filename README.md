@@ -65,10 +65,9 @@ Si tiene cualquier problema póngase en contacto con:
 En nuestra primera entrega presentamos la web del marketplace de relojes de lujo que incluye:
 *Página principal con el listado de anuncios
 *Buscador por marca y modelo
-*Página de detalles por cada anuncio
 *Página de compra
 
-En la próxima actualización nuestro objetivo es que los productos se agreguen a una cesta de compra.
+En la próxima actualización nuestro objetivo es que los productos se agreguen a una cesta de compra y que los vendedores puedan publicar sus anuncios.
 
 ***
 ## Colaboración
