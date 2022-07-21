@@ -1,9 +1,10 @@
 import React, { useState, useEffect }from "react";
 import axios from "axios";
+import ItemWatch from "./ItemWatch";
 import {Link} from "react-router-dom";
 
 
-export default function NavBar() {
+export default function SearchNavBar() {
   const [navbarOpen, setNavbarOpen] = useState(false)
   const [searchTerm, setSearchTerm] = useState([]);
   const [dataApi, setDataApi] = useState([]);
@@ -78,6 +79,32 @@ x-data="{open:false,menu:false, lokasi:false}">
     </div>
   </div>
 </nav>
+
+
+<section className="pt-20 lg:pt-[120px] pb-10 lg:pb-20 bg-[#F3F4F6]">
+<div className="">
+   <div className="flex flex-wrap justify-center">
+             {dataApi.filter((val)=>{
+                 if(searchTerm == ""){
+                 return val
+                 }
+                  if(val.model.toLowerCase().includes(searchTerm.toLowerCase())){
+                 return val;
+                 }
+                 if(val.brand.toLowerCase().includes(searchTerm.toLowerCase())){
+                  return val;
+                  }
+                 
+             }).map((val,key)=>{
+                 return <div>
+                         <ItemWatch key={key} model={val.model} brand={val.brand} price={val.price} condition={val.condition} description={val.description} image={val.image} id={val.id}/>
+
+                     </div>
+             })}
+     
+   </div>
+</div>
+</section>
 </>
     )
 }

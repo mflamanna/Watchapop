@@ -1,11 +1,11 @@
 import React from 'react';
-import NavBar from './components/NavBar';
+import SearchNavBar from './components/SearchNavBar';
 
 
 function App() {
   return (
     <>
-    <NavBar/>
+    <SearchNavBar/>
     </>
   );
 }
