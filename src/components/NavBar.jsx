@@ -1,18 +1,26 @@
 import React, { useState, useEffect }from "react";
 import axios from "axios";
 import ItemWatch from "./ItemWatch";
+import {Link} from "react-router-dom";
 
 
 export default function NavBar() {
+  const [navbarOpen, setNavbarOpen] = useState(false)
   const [searchTerm, setSearchTerm] = useState([]);
   const [dataApi, setDataApi] = useState([]);
+  const handleToggle = () => {
+    setNavbarOpen(!navbarOpen)
+  };
+
   useEffect (()=>{
-      axios.get("http://localhost:3000/watches")
+      axios.get("http://localhost:4000/watches")
       .then ((res)=> {
           setDataApi(res.data)
       })
       
   },[dataApi])
+
+  
 
     return (
       <>
@@ -23,16 +31,16 @@ x-data="{open:false,menu:false, lokasi:false}">
     <div className="max-w-7xl mx-auto px-2 sm:px-4 lg:px-8">
       <div className="relative flex items-center justify-between h-18">
         <div className="flex items-center px-2 lg:px-0">
-          <a className="flex-shrink-0" href="#">
+          <Link to="/" className="flex-shrink-0">
             <img className="block lg:hidden h-13 w-16" src="https://i.postimg.cc/wxPpJQ80/logo.png" alt="Logo"/>
             <img className="hidden lg:block h-18 w-24" src="https://i.postimg.cc/wxPpJQ80/logo.png" alt="Logo"/>
-          </a>
+          </Link>
           <div className="hidden lg:block lg:ml-2">
             <div className="flex">
-              <a href="#" className="ml-4 px-3 py-2 rounded-md text-lg leading-5 font-medium text-gray-800 font-semibold hover:bg-newYellow hover:text-newBlue transition duration-150 ease-in-out cursor-pointer focus:outline-none focus:text-white focus:bg-gray-700 "> Home </a>
-              <a href="#" className="ml-4 px-3 py-2 rounded-md text-lg leading-5 font-medium text-gray-800 font-semibold hover:bg-newYellow hover:text-newBlue transition duration-150 ease-in-out cursor-pointer focus:outline-none focus:text-white focus:bg-gray-700 "> Buy watch </a>
-              <a href="#" className="ml-4 px-3 py-2 rounded-md text-lg leading-5 font-medium text-gray-800 font-semibold hover:bg-newYellow hover:text-newBlue transition duration-150 ease-in-out cursor-pointer focus:outline-none focus:text-white focus:bg-gray-700 "> Sell watch </a>
-              <a href="#" className="ml-4 px-3 py-2 rounded-md text-lg leading-5 font-medium text-gray-800 font-semibold hover:bg-newYellow hover:text-newBlue transition duration-150 ease-in-out cursor-pointer focus:outline-none focus:text-white focus:bg-gray-700 "> Promos </a>
+              <Link to="/" className="ml-4 px-3 py-2 rounded-md text-lg leading-5 font-medium text-gray-800 font-semibold hover:bg-newYellow hover:text-newBlue transition duration-150 ease-in-out cursor-pointer focus:outline-none focus:text-white focus:bg-gray-700 "> Home </Link>
+              <Link to="/" className="ml-4 px-3 py-2 rounded-md text-lg leading-5 font-medium text-gray-800 font-semibold hover:bg-newYellow hover:text-newBlue transition duration-150 ease-in-out cursor-pointer focus:outline-none focus:text-white focus:bg-gray-700 "> Buy watch </Link>
+              <Link to="/" className="ml-4 px-3 py-2 rounded-md text-lg leading-5 font-medium text-gray-800 font-semibold hover:bg-newYellow hover:text-newBlue transition duration-150 ease-in-out cursor-pointer focus:outline-none focus:text-white focus:bg-gray-700 "> Sell watch </Link>
+              <Link to="/" className="ml-4 px-3 py-2 rounded-md text-lg leading-5 font-medium text-gray-800 font-semibold hover:bg-newYellow hover:text-newBlue transition duration-150 ease-in-out cursor-pointer focus:outline-none focus:text-white focus:bg-gray-700 "> Promos </Link>
             </div>
           </div>
         </div>
@@ -63,10 +71,10 @@ x-data="{open:false,menu:false, lokasi:false}">
     </div>
     <div x-show="menu" className="block md:hidden">
       <div class="px-2 pt-2 pb-3">
-        <a href="#" className="mt-1 block px-3 py-2 rounded-md text-white font-semibold font-medium hover:bg-yellow-500 focus:outline-none focus:text-white focus:bg-gray-700 transition duration-150 ease-in-out">Home </a>
-        <a href="#" className="mt-1 block px-3 py-2 rounded-md text-white font-semibold font-medium hover:bg-yellow-500 focus:outline-none focus:text-white focus:bg-gray-700 transition duration-150 ease-in-out">Buy watches </a>
-        <a href="#" className="mt-1 block px-3 py-2 rounded-md text-white font-semibold font-medium hover:bg-yellow-500 focus:outline-none focus:text-white focus:bg-gray-700 transition duration-150 ease-in-out">Sell watches </a>
-        <a href="#" className="mt-1 block px-3 py-2 rounded-md text-white font-semibold font-medium hover:bg-yellow-500 focus:outline-none focus:text-white focus:bg-gray-700 transition duration-150 ease-in-out">Promos </a>
+        <Link to="/" className="mt-1 block px-3 py-2 rounded-md text-white font-semibold font-medium hover:bg-yellow-500 focus:outline-none focus:text-white focus:bg-gray-700 transition duration-150 ease-in-out">Home </Link>
+        <Link to="/" className="mt-1 block px-3 py-2 rounded-md text-white font-semibold font-medium hover:bg-yellow-500 focus:outline-none focus:text-white focus:bg-gray-700 transition duration-150 ease-in-out">Buy watches </Link>
+        <Link to="/" className="mt-1 block px-3 py-2 rounded-md text-white font-semibold font-medium hover:bg-yellow-500 focus:outline-none focus:text-white focus:bg-gray-700 transition duration-150 ease-in-out">Sell watches </Link>
+        <Link to="/" className="mt-1 block px-3 py-2 rounded-md text-white font-semibold font-medium hover:bg-yellow-500 focus:outline-none focus:text-white focus:bg-gray-700 transition duration-150 ease-in-out">Promos </Link>
       </div>
     </div>
   </div>
