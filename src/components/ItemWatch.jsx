@@ -10,7 +10,7 @@ export default function ItemWatch ({model, brand, price, image}) {
     <div className="max-w-sm">
       <div className="bg-white relative shadow-lg hover:shadow-xl transition duration-500 rounded-lg cardWatch">
         
-        <img className="rounded-t-lg imgWatch" src={image} alt="" />
+      <Link to="/detail"><img className="rounded-t-lg imgWatch" src={image} alt="" /></Link>
         <div className="py-6 px-8 rounded-lg bg-white">
           <h1 className="text-gray-700 font-bold text-2xl mb-3 hover:text-gray-900 hover:cursor-pointer">{brand}</h1>
           <p className="text-gray-700 tracking-wide">{model}</p>
