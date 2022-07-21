@@ -44,6 +44,14 @@ Como instalar el repositorio:
  ``` 
 git clone https://github.com/mflamanna/watchapop.git
 ```
+3. Inicializar el json server en la terminal ingresando el comando:
+``` 
+npm run runwatches
+```
+4. Visualizar la web con el comando:
+``` 
+npm start
+```
 
 ***
 
@@ -54,27 +62,32 @@ Si tiene cualquier problema póngase en contacto con:
 ***
 ## Hoja de ruta
 
-En nuestra primera entrega presentamos la web del marketplace de relojes 
+En nuestra primera entrega presentamos la web del marketplace de relojes de lujo que incluye:
+*Página principal con el listado de anuncios
+*Buscador por marca y modelo
+*Página de detalles por cada anuncio
+*Página de compra
+
 En la próxima actualización nuestro objetivo es que los productos se agreguen a una cesta de compra.
 
 ***
 ## Colaboración
-El proyecto está abierto a cualquier persona que quiera aportar ideas o sugerencias. Podéis contactar con nosotros a través de:
+El proyecto está abierto a cualquier idea o sugerencia. Podéis contactar con nosotros a través de:
 
-> ejemploEmail@gmail.com
-
-***
-## Autores & agradecimientos
-[Florencia Lamanna](https://github.com/mflamanna)  
-
-
-Agradecimientos a:...  
-
-![googleCarlos](/img%20readme/googlecarlos.jpg)
+> watchapop@contact.com
 
 ***
-## FAQs
+## Autores
+[Florencia Lamanna](https://github.com/mflamanna)
 
-Preguntas frecuentes:
-1. **Si queremos poner alguna pregunta**
-y aqui poner su repuesta.
+[Kevin](https://github.com/KevsCha)
+
+[Miguel Ángel Rodriguez](https://github.com/miguelsalvadorrguez85)
+
+[Nathaly Ramirez](https://github.com/NathalyToyo)
+
+[Nuria Barea](https://github.com/nuria-barea)
+
+[Rosa Pacheco](https://github.com/RosaPS)
+
+[Samuel Alonso](https://github.com/UndefinedBehaviourAndIllFormed)
