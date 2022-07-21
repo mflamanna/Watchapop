@@ -1,5 +1,21 @@
-export default function NavBar (){
+import React, { useState, useEffect }from "react";
+import axios from "axios";
+import ItemWatch from "./ItemWatch";
+
+
+export default function NavBar() {
+  const [searchTerm, setSearchTerm] = useState([]);
+  const [dataApi, setDataApi] = useState([]);
+  useEffect (()=>{
+      axios.get("http://localhost:3000/watches")
+      .then ((res)=> {
+          setDataApi(res.data)
+      })
+      
+  },[dataApi])
+
     return (
+      <>
         <nav 
 className="z-0 relative" 
 x-data="{open:false,menu:false, lokasi:false}">
@@ -29,7 +45,7 @@ x-data="{open:false,menu:false, lokasi:false}">
                   <path fillRule="evenodd" d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z" clipRule="evenodd"></path>
                 </svg>
               </button>
-              <input type="text" name="s" id="s" className="block w-full pl-10 pr-3 py-2 border border-transparent rounded-md leading-5 bg-white-200 text-gray-300 placeholder-gray-400 focus:outline-none focus:bg-white focus:text-gray-900 sm:text-sm transition duration-150 ease-in-out" placeholder="Search"/>
+              <input type="text" name="s" id="s" className="block w-full pl-10 pr-3 py-2 border border-transparent rounded-md leading-5 bg-white-200 text-gray-300 placeholder-gray-400 focus:outline-none focus:bg-white focus:text-gray-900 sm:text-sm transition duration-150 ease-in-out" placeholder="Search by brand or model" onChange={e=>setSearchTerm(e.target.value)}/>
             </form>
           </div>
         </div>
@@ -47,13 +63,40 @@ x-data="{open:false,menu:false, lokasi:false}">
     </div>
     <div x-show="menu" className="block md:hidden">
       <div class="px-2 pt-2 pb-3">
-        <a href="#" className="mt-1 block px-3 py-2 rounded-md text-white font-semibold font-medium hover:bg-yellow-500 focus:outline-none focus:text-white focus:bg-gray-700 transition duration-150 ease-in-out">Location </a>
-        <a href="#" className="mt-1 block px-3 py-2 rounded-md text-white font-semibold font-medium hover:bg-yellow-500 focus:outline-none focus:text-white focus:bg-gray-700 transition duration-150 ease-in-out">Article </a>
-        <a href="#" className="mt-1 block px-3 py-2 rounded-md text-white font-semibold font-medium hover:bg-yellow-500 focus:outline-none focus:text-white focus:bg-gray-700 transition duration-150 ease-in-out">Recipe </a>
-        <a href="#" className="mt-1 block px-3 py-2 rounded-md text-white font-semibold font-medium hover:bg-yellow-500 focus:outline-none focus:text-white focus:bg-gray-700 transition duration-150 ease-in-out">Promo </a>
+        <a href="#" className="mt-1 block px-3 py-2 rounded-md text-white font-semibold font-medium hover:bg-yellow-500 focus:outline-none focus:text-white focus:bg-gray-700 transition duration-150 ease-in-out">Home </a>
+        <a href="#" className="mt-1 block px-3 py-2 rounded-md text-white font-semibold font-medium hover:bg-yellow-500 focus:outline-none focus:text-white focus:bg-gray-700 transition duration-150 ease-in-out">Buy watches </a>
+        <a href="#" className="mt-1 block px-3 py-2 rounded-md text-white font-semibold font-medium hover:bg-yellow-500 focus:outline-none focus:text-white focus:bg-gray-700 transition duration-150 ease-in-out">Sell watches </a>
+        <a href="#" className="mt-1 block px-3 py-2 rounded-md text-white font-semibold font-medium hover:bg-yellow-500 focus:outline-none focus:text-white focus:bg-gray-700 transition duration-150 ease-in-out">Promos </a>
       </div>
     </div>
   </div>
 </nav>
+
+
+<section className="pt-20 lg:pt-[120px] pb-10 lg:pb-20 bg-[#F3F4F6]">
+<div className="">
+   <div className="flex flex-wrap justify-center">
+             {dataApi.filter((val)=>{
+                 if(searchTerm == ""){
+                 return val
+                 }
+                  if(val.model.toLowerCase().includes(searchTerm.toLowerCase())){
+                 return val;
+                 }
+                 if(val.brand.toLowerCase().includes(searchTerm.toLowerCase())){
+                  return val;
+                  }
+                 
+             }).map((val,key)=>{
+                 return <div>
+                         <ItemWatch key={key} model={val.model} brand={val.brand} price={val.price} condition={val.condition} description={val.description} image={val.image} id={val.id}/>
+
+                     </div>
+             })}
+     
+   </div>
+</div>
+</section>
+</>
     )
 }
