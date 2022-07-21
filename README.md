@@ -3,14 +3,12 @@
 
 ## Tabla de Contenidos
 1. [Información General](#información-general)
-2. [Capturas de Pantalla](#capturas-de-pantalla)
-3. [Tecnologías](#tecnologías)
-4. [Instalación](#instalación)
-5. [Soporte](#soporte)
-6. [Hoja de ruta](#hoja-de-ruta)
-7. [Colaboración](#colaboración)
-8. [Autores & agradecimientos](#autores--agradecimientos)
-9. [FAQs](#faqs)
+2. [Tecnologías](#tecnologías)
+3. [Instalación](#instalación)
+4. [Soporte](#soporte)
+5. [Hoja de ruta](#hoja-de-ruta)
+6. [Colaboración](#colaboración)
+7. [Autores](#autores--agradecimientos)
 
 ***
 ## Información General
