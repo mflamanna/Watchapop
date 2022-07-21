@@ -1,6 +1,6 @@
 export default function ItemWatch ({model, brand, price, image}) {
     return (
-        <div className="min-h-screen bg-gray-100 flex">
+        <div data-testid="item" className="min-h-screen bg-gray-100 flex">
   <div className="container">
     <div className="max-w-sm">
       <div className="bg-white relative shadow-lg hover:shadow-xl transition duration-500 rounded-lg cardWatch">
