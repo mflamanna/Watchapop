@@ -13,7 +13,7 @@ export default function SearchNavBar() {
   };
 
   useEffect (()=>{
-      axios.get("http://localhost:4000/watches")
+      axios.get("http://localhost:3000/watches")
       .then ((res)=> {
           setDataApi(res.data)
       })

@@ -1,3 +1,5 @@
+
+
 export default function ItemWatch ({model, brand, price, image}) {
     return (
         <div className="min-h-screen bg-gray-100 flex">

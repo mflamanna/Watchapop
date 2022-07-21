@@ -6,15 +6,15 @@ import {Link} from "react-router-dom";
 export default function NavBar() {
   const [navbarOpen, setNavbarOpen] = useState(false)
   const [searchTerm, setSearchTerm] = useState([]);
-  const [dataApi, setDataApi] = useState([]);
+  const [dataApi, setdataApi] = useState([]);
   const handleToggle = () => {
     setNavbarOpen(!navbarOpen)
   };
 
   useEffect (()=>{
-      axios.get("http://localhost:4000/watches")
+      axios.get("http://localhost:3000/watches")
       .then ((res)=> {
-          setDataApi(res.data)
+          setdataApi(res.data)
       })
       
   },[dataApi])
@@ -46,7 +46,7 @@ x-data="{open:false,menu:false, lokasi:false}">
         <div className="flex-1 flex justify-center px-2 lg:ml-6 lg:justify-end">
           <div className="max-w-lg w-full lg:max-w-xs">
             <label htmlFor="search" className="sr-only">Search </label>
-            <form methode="get" action="#" className="relative z-50">
+            <form methode="get" action="/" className="relative z-50">
               <button type="submit" id="searchsubmit" className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
                 <svg className="h-5 w-5 text-gray-400" fill="currentColor" viewBox="0 0 20 20">
                   <path fillRule="evenodd" d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z" clipRule="evenodd"></path>
