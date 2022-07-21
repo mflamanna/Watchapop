@@ -1,14 +1,13 @@
 import React from 'react';
-import ListWatch from './components/ListWatch';
-import NavBar from './components/NavBar';
+import SearchNavBar from './components/SearchNavBar';
 import Footer from './components/Footer';
 
 
 function App() {
   return (
     <>
-    <NavBar/>
-    <ListWatch/>
+    <SearchNavBar/>
+    
     <Footer/>
 
     
