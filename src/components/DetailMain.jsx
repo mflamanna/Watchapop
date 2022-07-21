@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react"
 import { useParams } from "react-router-dom"
+import { Link } from "react-router-dom"
 //import Getinfo from '../services/Getinfo.jsx';
 
 export default function DetailMain () {
@@ -25,8 +26,8 @@ export default function DetailMain () {
                 <div class="lg:w-4/5 mx-auto flex flex-wrap">
                 <img alt="ecommerce" class="lg:w-1/2 w-full object-cover object-center rounded border border-gray-200" src="https://cdn2.chrono24.com/images/uhren/23568566-c1pv8cc0ne12wmt47931uuny-ExtraLarge.jpg"/>
                 <div class="lg:w-1/2 w-full lg:pl-10 lg:py-6 mt-6 lg:mt-0">
-                    <h2 class="text-sm title-font text-gray-400 tracking-widest">Status: available</h2>
-                    <h1 class="text-gray-900 text-3xl title-font font-medium mb-1">Model name</h1>
+                    <h2 class="text-sm title-font text-gray-400 tracking-widest">Nuevo</h2>
+                    <h1 class="text-gray-900 text-3xl title-font font-medium mb-1">Daytona Zenith Stainless Steel 16520</h1>
                     <div class="flex mb-4">
                     <span class="flex items-center">
                         <button><svg fill="currentColor" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-4 h-4 text-newBlue hover:text-newGreen" viewBox="0 0 24 24">
@@ -64,18 +65,21 @@ export default function DetailMain () {
                         </button>
                     </span>
                     </div>
-                    <p class="leading-relaxed">Fam locavore kickstarter distillery. Mixtape chillwave tumeric sriracha taximy chia microdosing tilde DIY. XOXO fam indxgo juiceramps cornhole raw denim forage brooklyn. Everyday carry +1 seitan poutine tumeric. Gastropub blue bottle austin listicle pour-over, neutra jean shorts keytar banjo tattooed umami cardigan.</p>
+                    <p class="leading-relaxed">Este es un reloj seminuevo Rolex Daytona zenith para hombres 16520. 40.00mm tamaño de la caja en acero inoxidable, esfera blanca en una pulsera de acero inoxidable de la ostra, impulsado por un movimiento automático. Este Rolex está en excelente estado completo con caja de rolex y garantía de servicio. Circa 1998.</p>
                     <div class="flex mt-6 items-center pb-5 border-b-2 border-gray-200 mb-5">
                     
                     </div>
                     <div class="flex">
-                    <span class="title-font font-medium text-2xl text-gray-900">1000€</span>
-                    <button class="flex ml-auto py-2 px-6 text-white bg-newBlue focus:outline-none hover:bg-newGreen hover:text-newBlue rounded">Buy</button>
+                    <span class="title-font font-medium text-2xl text-gray-900">38451€</span>
+                    <Link to= "/form" class="flex ml-auto py-2 px-6 text-white bg-newBlue focus:outline-none hover:bg-newGreen hover:text-newBlue rounded">
+                    <button >Buy</button>
+                    </Link>
                     <button class="rounded-full w-10 h-10 bg-newGreen p-0 border-0 inline-flex items-center justify-center text-newBlue ml-4 hover:bg-newBlue hover:text-newGreen">
                         <svg fill="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
                         <path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"></path>
                         </svg>
                     </button>
+            
                     </div>
                 </div>
                 </div>

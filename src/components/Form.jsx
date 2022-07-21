@@ -10,7 +10,7 @@ export default function Form (){
             </div>
             <div>
                 <label class="text-newBlue font-semibold block my-3 text-md" for="email">Adress</label>
-                <input class="w-full bg-gray-100 px-4 py-2 rounded-lg focus:outline-none" type="text" name="email" id="email" placeholder="@email" />
+                <input class="w-full bg-gray-100 px-4 py-2 rounded-lg focus:outline-none" type="text" name="email" id="email" placeholder="Adress" />
             </div>
             <div>
                 <label class="text-newBlue font-semibold block my-3 text-md" for="password">Phone Number</label>
