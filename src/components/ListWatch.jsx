@@ -13,9 +13,9 @@ function ListWatch (){
     },[watchApi])
 
     return(
-        <section class="pt-20 lg:pt-[120px] pb-10 lg:pb-20 bg-[#F3F4F6]">
-   <div class="container">
-      <div class="flex flex-wrap space-x-9">
+        <section className="pt-20 lg:pt-[120px] pb-10 lg:pb-20 bg-[#F3F4F6]">
+   <div className="">
+      <div className="flex flex-wrap">
       {
                     watchApi.map((item,index)=>(
                         <ItemWatch key={index} model={item.model} brand={item.brand} price={item.price} condition={item.condition} description={item.description} image={item.image} id={item.id}/>
