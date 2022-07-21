@@ -20,14 +20,6 @@ Web para **Watchapop**, un marketplace de relojes de lujo que funciona como inte
 *Proyecto en proceso de desarrollo.*   
 
 ***
-
-## Capturas de pantalla
-
-![screenshot-01]()
-***
-![Iscreenshot-02]()
-
-***
 ## Tecnologías
 Lista de tecnologías usadas en el desarrollo del proyecto:
 * HTML: Version HTML 5
