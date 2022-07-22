@@ -23,7 +23,7 @@ Lista de tecnologías usadas en el desarrollo del proyecto:
 * HTML: Version HTML 5
 * CSS: Version CSS3
 * React JS (Router, Axios, Json-Server)
-* Tilewind
+* Tailwind
 
 ***
 ## Instalación
